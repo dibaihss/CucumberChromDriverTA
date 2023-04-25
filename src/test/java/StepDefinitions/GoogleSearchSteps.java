@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -13,7 +14,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.*;
 
 public class GoogleSearchSteps {
-	String parentWindowHandle;
 	WebDriver driver = null;
 
 	@Given("open Google Chrome browser")
@@ -27,10 +27,9 @@ System.out.println("Starting - browser is open");
 	
 		driver = new ChromeDriver();
 		
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+		driver.manage().window().maximize();
 		
-		parentWindowHandle = driver.getWindowHandle();
+
 		
 		System.out.println("Ending - browser is open");
 	}
@@ -60,9 +59,62 @@ System.out.println("Starting - browser is open");
 	@Then("^the login is (.*)$")
 	public void the_login_is_successful(String status) {
 		System.out.println("The Status of the test is " + status);
-		//driver.getPageSource().contains("The username/password provided is invalid.");
+		
+
+//		driver.getPageSource().contains("kkk");
 		//driver.close();
 		//driver.quit();
+      WebElement errorMessage = driver.findElement(By.id("login_error_span"));
+      String expectedErrorMessage = "The maximum number of to login was reached; please contact your system administrator.";
+      String actualErrorMessage = errorMessage.getText();
+
+      Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
 	}
 
 }
+
+//V2
+//import org.openqa.selenium.By;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+//import org.openqa.selenium.chrome.ChromeDriver;
+//import org.testng.Assert;
+//import org.testng.annotations.AfterMethod;
+//import org.testng.annotations.BeforeMethod;
+//import org.testng.annotations.Test;
+//
+//public class FailedTestScenario {
+//    WebDriver driver;
+//
+//    @BeforeMethod
+//    public void setup() {
+//        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+//        driver = new ChromeDriver();
+//        driver.manage().window().maximize();
+//    }
+//
+//    @Test
+//    public void loginTest() {
+//        driver.get("https://example.com/login");
+//        WebElement emailField = driver.findElement(By.id("email"));
+//        emailField.sendKeys("invalidemail@example.com");
+//
+//        WebElement passwordField = driver.findElement(By.id("password"));
+//        passwordField.sendKeys("password");
+//
+//        WebElement loginButton = driver.findElement(By.id("login-button"));
+//        loginButton.click();
+//
+//        WebElement errorMessage = driver.findElement(By.className("error-message"));
+//        String expectedErrorMessage = "Invalid email or password";
+//        String actualErrorMessage = errorMessage.getText();
+//
+//        Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
+//    }
+//
+//    @AfterMethod
+//    public void tearDown() {
+//        driver.quit();
+//    }
+//}
+

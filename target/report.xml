@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="8.107" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Systemtest_Crusius_Login" name="SystemTest__Crusius_Login__Login_Is_Successful_With_Valid_Credentials - Example #1.1" time="7.834">
+<testsuite name="Cucumber" time="6.22" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Systemtest_Crusius_Login" name="SystemTest__Crusius_Login__Login_Is_Successful_With_Valid_Credentials - Example #1.1" time="5.942">
+<failure type="org.junit.ComparisonFailure" message="expected:&lt;...e maximum number of [attempts ]to login was reached...&gt; but was:&lt;...e maximum number of []to login was reached...&gt;">
+<![CDATA[org.junit.ComparisonFailure: expected:<...e maximum number of [attempts ]to login was reached...> but was:<...e maximum number of []to login was reached...>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at StepDefinitions.GoogleSearchSteps.the_login_is_successful(GoogleSearchSteps.java:71)
+	at ✽.the login is fail(file:///Users/dibaihss/Documents/Cucumber/CucumberJava%202/CucumberJava/src/test/resources/Features/SystemTest_Crusius_Login.feature:10)
+]]>
+</failure>
 <system-out><![CDATA[
 Given open Google Chrome browser............................................passed
 And navigate to the Sapiens IDIT Suite home page............................passed
 When the user enters a valid aourjuba1......................................passed
 And user enters a valid A4next..............................................passed
 And the user clicks the button Login........................................passed
-Then the login is fail......................................................passed
+Then the login is fail......................................................failed
 ]]></system-out>
 </testcase>
 </testsuite>
