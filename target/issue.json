@@ -1,0 +1,12 @@
+{
+    "fields": {
+        "project": {
+            "key": "IN"
+        },
+        "summary": "Test issue created with REST API",
+        "description": "This issue was created using the JIRA REST API",
+        "issuetype": {
+            "name": "Bug"
+        }
+    }
+}

@@ -12,8 +12,9 @@ publish = true,
 plugin = {"pretty","junit:target/report.xml"}
 )
 public class TestRunner {
-
 }
 
+//{"pretty","junit:target/report.xml"}
 //{"pretty","html:targets/HtmlReports.html"}
 //{"pretty","json:target/JSONReports.json"}
+
