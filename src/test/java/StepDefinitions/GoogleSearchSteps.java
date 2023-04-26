@@ -26,11 +26,7 @@ System.out.println("Starting - browser is open");
 		System.setProperty("webdriver.chrome.driver",projectPath + "/src/test/resources/drivers/chromedriver" );
 	
 		driver = new ChromeDriver();
-		
 		driver.manage().window().maximize();
-		
-
-		
 		System.out.println("Ending - browser is open");
 	}
 
@@ -60,18 +56,18 @@ System.out.println("Starting - browser is open");
 	public void the_login_is_successful(String status) {
 		System.out.println("The Status of the test is " + status);
 		
-
-//		driver.getPageSource().contains("kkk");
 		//driver.close();
 		//driver.quit();
       WebElement errorMessage = driver.findElement(By.id("login_error_span"));
-      String expectedErrorMessage = "The maximum number of to login was reached; please contact your system administrator.";
+      //The maximum number of attempts to login was reached; please contact your system administrator.
+      String expectedErrorMessage = "Thehgh.";
       String actualErrorMessage = errorMessage.getText();
 
       Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
 	}
-
 }
+
+
 
 //V2
 //import org.openqa.selenium.By;
