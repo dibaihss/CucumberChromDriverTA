@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="5.666" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Systemtest_Crusius_Login" name="SystemTest__Crusius__Login_Is_Successful_With_Valid_Credentials - Example #1.1" time="5.478">
+<testsuite name="Cucumber" time="8.275" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Systemtest_Crusius_Login" name="SystemTest__Crusius__Login_Is_Successful_With_Valid_Credentials - Example #1.1" time="8.014">
 <system-out><![CDATA[
 Given open Google Chrome browser............................................passed
 And navigate to the Sapiens IDIT Suite home page............................passed
