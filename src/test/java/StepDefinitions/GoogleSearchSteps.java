@@ -60,7 +60,7 @@ System.out.println("Starting - browser is open");
 		//driver.quit();
       WebElement errorMessage = driver.findElement(By.id("login_error_span"));
       //The maximum number of attempts to login was reached; please contact your system administrator.
-      String expectedErrorMessage = "Thehgh.";
+      String expectedErrorMessage = "The maximum number of attempts to login was reached; please contact your system administrator.";
       String actualErrorMessage = errorMessage.getText();
 
       Assert.assertEquals(actualErrorMessage, expectedErrorMessage);
