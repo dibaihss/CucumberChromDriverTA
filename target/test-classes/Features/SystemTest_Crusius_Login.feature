@@ -11,6 +11,6 @@ Feature: Systemtest_Crusius_Login
     
     Examples:
     | username | password | status |
-    #| aourjuba1 | A4next! | success|
-    | aourjuba1 |  A4next | fail |
+    | aourjuba1 | A4next! | success|
+   # | aourjuba1 |  A4next | fail |
 

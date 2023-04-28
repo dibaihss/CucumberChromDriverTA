@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="8.275" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="Systemtest_Crusius_Login" name="SystemTest__Crusius__Login_Is_Successful_With_Valid_Credentials - Example #1.1" time="8.014">
+<testsuite name="Cucumber" time="7.524" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Systemtest_Crusius_Login" name="SystemTest__Crusius__Login_Is_Successful_With_Valid_Credentials - Example #1.1" time="7.264">
 <system-out><![CDATA[
 Given open Google Chrome browser............................................passed
 And navigate to the Sapiens IDIT Suite home page............................passed
 When the user enters a valid aourjuba1......................................passed
-And user enters a valid A4next..............................................passed
+And user enters a valid A4next!.............................................passed
 And the user clicks the button Login........................................passed
-Then the login is fail......................................................passed
+Then the login is success...................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>

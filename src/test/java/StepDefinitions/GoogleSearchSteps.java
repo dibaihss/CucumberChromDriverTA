@@ -30,7 +30,6 @@ System.out.println("Starting - browser is open");
 		System.out.println("Ending - browser is open");
 	}
 
-
 	@And("navigate to the Sapiens IDIT Suite home page")
 	public void navigate_to_the_sapiens_idit_suite_home_page() throws InterruptedException {
 		driver.navigate().to("https://vh-idit-uat.sapiensmgs.com/idit-web/web-framework/login.do?isSameWindow=true");
@@ -55,11 +54,8 @@ System.out.println("Starting - browser is open");
 	@Then("^the login is (.*)$")
 	public void the_login_is_successful(String status) {
 		System.out.println("The Status of the test is " + status);
-		
-		//driver.close();
-		//driver.quit();
-      WebElement errorMessage = driver.findElement(By.id("login_error_span"));
-      //The maximum number of attempts to login was reached; please contact your system administrator.
+	 WebElement errorMessage = driver.findElement(By.id("login_error_span"));     
+	 
       String expectedErrorMessage = "The maximum number of attempts to login was reached; please contact your system administrator.";
       String actualErrorMessage = errorMessage.getText();
 
